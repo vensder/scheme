@@ -8,6 +8,7 @@
 
 (define (good-enough? guess x)
   (< (abs (- (square guess) x)) 0.00000000000001))
+  ;(eq? x (square guess))) ; infinity loop
 
 (define (try guess x)
   (if (good-enough? guess x)
